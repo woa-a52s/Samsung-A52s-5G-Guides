@@ -88,7 +88,15 @@ adb shell
 fix-gpt
 ```
 
-- Execute parted utility:
+- Reboot to TWRP again to update partition table changes:
+
+```sh
+reboot recovery
+```
+
+- Once back in TWRP, in the "Mount" menu untick the checkbox on the userdata partition to unmount it.
+
+- Execute the parted utility:
 
 ```sh
 parted /dev/block/sda
