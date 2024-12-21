@@ -163,7 +163,7 @@ mkfs.fat -F32 -s1 /dev/block/bootdevice/by-name/esp
 - Format the Windows partition to NTFS filesystem:
 
 ```sh
-mkfs.fat -F32 -s1 /dev/block/bootdevice/by-name/win
+mkfs.ntfs -f /dev/block/bootdevice/by-name/win
 ```
 
 - Format userdata partition to F2FS in TWRP menu: Wipe > Format Data > yes
