@@ -92,7 +92,4 @@ After a successful flash, reboot the device to Windows with this command:
 
 If you did everything right, Windows will now boot! Enjoy!
 
-> [!NOTE]
-> When booting Windows, make sure the USB cable is unplugged from the Galaxy A52s, as this can cause a BSOD and Windows setup will fail. If that happens, you will need to re-install Windows.
-
 Let Windows set itself up, it is normal for Windows to reboot in the installation process.
