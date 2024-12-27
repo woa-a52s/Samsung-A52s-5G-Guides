@@ -75,7 +75,7 @@ On your Windows computer, open command prompt or terminal in the **imageutility*
 Enter this command to flash the Windows FFU file on your device:
 
 ```
-.\imageutility.exe FlashDevice -Path Samsung_Galaxy_A52s_5G_128GB_HalfSplit.ffu
+.\imageutility.exe FlashDevice -Path Samsung_Galaxy_A52s_5G_128GB_HalfSplit-v1.0.0.ffu
 ```
 
 The FFU flashing process will start. If the flash is successful, you should see this on your device:
