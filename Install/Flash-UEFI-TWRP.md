@@ -20,7 +20,7 @@ Table of Contents:
 - [Samsung USB drivers](https://developer.samsung.com/android-usb-driver)
 - [Odin flashing utility](../Files/Odin3_v3.14.4.zip)
 - [TWRP image](../Files/twrp.tar)
-- [UEFI image](https://github.com/woa-a52s/Galaxy-A52s-5G-Releases)
+- [UEFI image](https://github.com/woa-a52s/Samsung-A52s-5G-Releases/releases/latest)
 - [SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools)
 - A Windows PC to flash the device
 
@@ -46,7 +46,9 @@ From the "Files/Tools needed" section:
 
 - Download twrp.tar and keep in somewhere accessible on your PC
 
-- Download UEFI.img from the latest release attachments in the Galaxy-A52s-5G-Releases page
+- Download UEFI-vX.X.X.zip from the release attachments in the Galaxy-A52s-5G-Releases page.
+
+- Extract the UEFI .zip archive.
 
 ## Entering Download mode on Galaxy A52s 5G
 
@@ -91,6 +93,10 @@ For restoring the boot image later, use the "Restore" section in the main TWRP p
 ## Flashing UEFI
 
 There are a few ways to flash the UEFI image to Galaxy A52s 5G.
+
+> [!NOTE]
+> If installing Windows with an FFU image, please use the Mu_aloha-UEFI.img image (contained in UEFI-vX.X.X.zip archive).
+
 
 **Option 1**: Refer to the guide's [Flashing with Odin](#flashing-with-odin) section and flash the UEFI image with Odin. Use an archiving utility, rename UEFI.img to boot.img and compress it to .tar file. Flash the compressed UEFI .tar image with Odin, loading it in the **AP** slot.
 
