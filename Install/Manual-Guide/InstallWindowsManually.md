@@ -53,7 +53,7 @@ Table of Contents:
 ## Acquiring all files
 
 
-[A52sxq-Drivers-v1.0.0-Desktop.7z](https://github.com/woa-a52s/Galaxy-A52s-5G-Releases/releases/download/v1.0.0/A52sxq-Drivers-v1.0.0-Desktop.7z)
+[A52sxq-Drivers-vX.X.X-Desktop.7z](https://github.com/woa-a52s/Samsung-A52s-5G-Releases/releases/latest)
 
 [imageutility.zip](../../Files/imageutility.zip)
 
@@ -290,7 +290,7 @@ After this operation there will be 2 drives with the drive letters that were ass
 > [!WARNING]
 From now on we will assume X: is the Win partition and that S: is the ESP partition for all the commands. You very very likely used other letters, or have to use other letters. Replace them correctly with what you previously picked or you will lose data on your PC.
 
-- We will need our install.wim file now. If you haven't it already, you can [use this guide](../ISO/GetWindows.md). When you are ready, run these commands:
+- We will need our install.wim file now. If you haven't retrieved a Windows ISO yet, you can [use this guide](../ISO/GetWindows.md). When you are ready, run these commands:
 
 ```batch
 dism /apply-image /ImageFile:"<path to install.wim>" /index:1 /ApplyDir:X:\
@@ -336,8 +336,5 @@ Congratulations, you just installed your drivers!
 ## Boot Windows
 
 If you did everything right, Windows will now boot! Enjoy!
-
-> [!NOTE]
-> When booting Windows, make sure the USB cable is unplugged from the Galaxy A52s, as this can cause a BSOD and Windows setup will fail. If that happens, you will need to re-install Windows.
 
 Let Windows set itself up, it is normal for Windows to reboot in the installation process.
