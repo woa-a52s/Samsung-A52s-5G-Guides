@@ -14,7 +14,7 @@ _No ETA will be provided for **any** of these development phases_
 
 ---
 
-Global progress: 43.47%
+Global progress: 52.09%
 
 | Feature                | Description                                                                                                    | Working state |
 |------------------------|----------------------------------------------------------------------------------------------------------------|---------------|
@@ -28,12 +28,13 @@ Global progress: 43.47%
 | 👆 Touchscreen          |                                                                                                                | ✅           |
 | 💤 Modern Standby       |                                                                                                                | ✅           |
 | 📌 GPS                  |                                                                                                                | ✅           |
-| 📦 UFS                 |                                                                                                                | ✅           |
+| 📦 UFS                  |                                                                                                                | ✅           |
+| 💾 SD Card              |                                                                                                                | ✅           |
 | 📲 Display              |                                                                                                                | ✅           |
 | 📳 Vibration motor      |                                                                                                                | ❌           |
 | 📸 [Camera Flash](https://gist.github.com/gus33000/8720db998a7ab9c164bd6a96e00dac32) | ICP is not functional                             | ❌           |
-| 🔋 Battery              | A52s uses custom PMIC, fuelgauge driver needs to be written                                                    | ❌           |
-| 🔌 Charger              | Charging is not over ADSP, needs custom implementation                                                         | ❌           |
+| 🔋 Battery              |                                                                                                                | ✅           |
+| 🔌 Charger              | Custom charging driver needs to be written (WIP)                                                               | ❌           |
 | 🔵 Bluetooth            |                                                                                                                | ✅           |
 | 🧭 Sensors              |                                                                                                                | ❌           |
 | 🧮 SoC Cores            |                                                                                                                | ✅           |
