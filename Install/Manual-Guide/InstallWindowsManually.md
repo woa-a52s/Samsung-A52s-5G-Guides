@@ -13,7 +13,6 @@ Table of Contents:
    * [Unlocking the Bootloader](#unlocking-the-bootloader)
    * [Flashing UEFI and TWRP](#flashing-uefi-and-twrp)
    * [Partitioning](#partitioning)
-   * [Fixing GPT tables of other LUNs](#fixing-gpt-tables-of-other-luns)
    * [Activating Mass Storage Mode](#activating-mass-storage-mode)
    * [Installing Windows](#installing-windows)
    * [Installing the drivers](#installing-the-drivers)
@@ -25,7 +24,6 @@ Table of Contents:
 - Windows drivers
 - UEFI and TWRP images
 - imageutility.zip
-- FFU for patching LUNs
 - SDK platform tools
 - A Windows PC to flash the device
 
@@ -57,12 +55,9 @@ Table of Contents:
 
 [imageutility.zip](../../Files/imageutility.zip)
 
-[Fix_GPT_LUNs_1-5.ffu](../../Files/Fix_GPT_LUNs_1-5.ffu)
-
 [SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools)
 
 - Download the imageutility.zip archive and extract it on your computer.
-- Once you have acquired Fix_GPT_LUNs_1-5.ffu file, place it in the extracted **imageutility** folder.
 
 ## Unlocking the Bootloader
 
@@ -78,7 +73,8 @@ There are two methods to partition the device, choose a single option to continu
 
 <details>
    <summary><strong>Option 1: Flashing an FFU file with prebuilt partitions</strong></summary> 
-
+<br>
+  
 - Extract the previously downloaded imageutility.zip archive on your computer.
 - Pick a preffered storage layout from this table and download the provided FFU file
 
@@ -117,7 +113,8 @@ After a successful flash, the script will prompt you to reboot the device (Y/N).
 
 <details>
    <summary><strong>Option 2: Manual partitioning</strong></summary> 
-
+<br>
+  
 - Extract the previously downloaded imageutility.zip archive on your computer.
 - Download the [LUNs_stock_online_fixed.ffu](../../Files/LUNs_stock_online_fixed.ffu) FFU file which will re-provision all LUNs and set the LUN0 online.
 - Once you have acquired an .FFU file, place it in the extracted **imageutility** folder.
