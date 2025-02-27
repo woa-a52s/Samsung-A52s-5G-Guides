@@ -70,25 +70,20 @@ FFU file needs to be flashed in the UFP mode in UEFI. To enter UFP mode, folow t
 
 ## Flashing the Windows FFU Image
 
-On your Windows computer, open command prompt or terminal in the **imageutility** directory.
+On your Windows computer, open the `flash.cmd` file in the **imageutility** directory.
 
-Enter this command to flash the Windows FFU file on your device:
-
-```
-.\imageutility.exe FlashDevice -Path Samsung_Galaxy_A52s_5G_128GB_HalfSplit-vX.X.X.ffu
-```
+The script will automatically find an .FFU file in the current directory and will prompt you to flash the file (Y/N). Type Y to continue.
 
 The FFU flashing process will start. If the flash is successful, you should see this on your device:
 
 <img src="../images/FFU-flash-success.png" width="280">
 
-After a successful flash, reboot the device to Windows with this command:
-
-```
-.\imageutility.exe RebootDevice
-```
+After a successful flash, the script will prompt you to reboot the device (Y/N). Type Y to reboot to Windows.
 
 ## Boot Windows
+
+> [!NOTE]
+> When booting OS, unplug the USB cable from the device. Otherwise, the host-mode USB drivers will not work in Windows.
 
 If you did everything right, Windows will now boot! Enjoy!
 

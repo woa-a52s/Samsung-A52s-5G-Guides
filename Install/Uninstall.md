@@ -16,8 +16,9 @@ Contact us instead for help!
 
 ## Files/Tools Needed
 
-- TWRP image
-- Stock Android boot.img, or a backup of it
+- [Samsung USB drivers](https://developer.samsung.com/android-usb-driver)
+- [Odin flashing utility](../Files/Odin3_v3.14.4.zip)
+- [PIT file](../Files/A52SXQ_EUR_OPEN.pit)
 
 ## Disclaimers
 
@@ -28,61 +29,43 @@ Contact us instead for help!
 >
 > but this is **STILL IN PREVIEW** and things can go wrong.
 
-**PLEASE READ AND BE SURE TO UNDERSTAND THE ENTIRE GUIDE BEFORE STARTING**
-
-If you caused modifications to Android™ system partitions and are not knowingly using Custom Trusted Boot certificates or do not know what we're talking about here but flashed a dual boot image onto your device, you need to revert this. Please see the dual boot guide for assistance first and foremost. Otherwise below's steps will brick your device.
-
 # Steps
 
 ## Acquiring all files
 
-[SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools)
+Download and install the Samsung USB drivers to use Odin.
 
-This guide assumes the target device already has TWRP recovery flashed. If needed, please consult the [Flashing TWRP and UEFI](../Flash-UEFI-TWRP.md) guide for flashing TWRP.
+Extract the downloaded Odin3_v3.14.4.zip archive and open the Odin executable.
 
-If the Android boot image backup was not done prior to installing Windows, a stock boot image will need to be extracted from the device firmware.
+## Booting to Download Mode
 
-To acquire a stock boot image, please download the Galaxy A52s 5G stock AP firmware tarball. You can achieve this using websites like [samfw.com](https://samfw.com)
+To flash the PIT file you will need to boot your phone into Download mode.
 
-## Restoring the partition table
+You can choose to do this with either of these options:
 
-- Enter the TWRP recovery environment by holding the volume up and power buttons on the device (with USB cable plugged in)
+**Boot to Download mode with button combinations**
+- While the phone is powered off, hold both Volume up and Volume down buttons together
+and connect your phone to the PC with a USB cable.
+- Your phone will now boot to Download mode, then again press
+Volume up button to continue and your phone should get detected on Windows.
 
-- Either in adb shell, or in the TWRP recovery UI terminal enter this command:
+**Boot to Download mode from recovery**
+- If you're using a custom recovery like TWRP or OrangeFox, you can reboot to Download mode
+in the recovery's `Reboot` menu by selecting `Download`.
 
-```batch
-restore-gpt
-```
+## Re-partitioning the UFS
 
-The following command will flash the stock LUN0 GPT table which will restore all partitions and the GPT table to OEM's.
+Open Odin application that you have downloaded from the prerequisites section before.
 
-- Format userdata partition to F2FS in TWRP menu: Wipe > Format Data > yes
+Select the Pit tab in Odin. You will get a warning that this functionality is used for engineers only. You can safely ignore this message.
 
-## Restoring boot
+![img](images/Odin-1.png)
 
-**Option 1**
+Click on the PIT button and load the PIT file that you have downloaded from the prerequisites before.
+After you inserted the file, simply click the `Start` button.
 
-If you have made a backup of the boot image to an SD Card with TWRP, simply use the "Restore" feature of the custom recovery.
+![img](images/Odin-2.png)
 
-**Option 2**
+You should see a message in Odin that the flash was successful and your phone should reboot.
 
-If you have made a backup of the boot image on your computer:
-
-Make sure that either adb is on PATH in your terminal, or you are in the same directory where adb.exe exists.
-
-Open the command prompt on your PC and execute the following command to push the backed up boot image to the device:
-
-```batch
-adb push C:\Path\To\boot.img /sdcard
-```
-
-After pushing the file, in TWRP recovery menu open the "Install" page, at the bottom-right corner press the "Image" button,
-find boot.img file in the /sdcard directory and flash it to `Boot` slot.
-
-**Option 3**
-
-If you don't have an Android boot image backup, download stock Galaxy A52s 5G AP firmware tarball (from the same firmware build you currently have!) from [samfw.com](https://samfw.com).
-
-Use compression utilities like 7-zip or WinRAR to extract the boot.img file from the AP .tar.md5 archive.
-
-Then consult the "Option 2" boot image flashing process detailed above.
+If you've done everything correctly, your phone should be restored to the stock partition layout.

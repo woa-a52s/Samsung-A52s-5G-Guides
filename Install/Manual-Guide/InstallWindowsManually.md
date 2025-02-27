@@ -74,6 +74,71 @@ If not already done, please first proceed with the [Flashing TWRP and UEFI](../F
 
 ## Partitioning
 
+There are two methods to partition the device, choose a single option to continue.
+
+<details>
+   <summary><strong>Option 1: Flashing an FFU file with prebuilt partitions</strong></summary> 
+
+- Extract the previously downloaded imageutility.zip archive on your computer.
+- Pick a preffered storage layout from this table and download the provided FFU file
+
+<strong>For 128GB storage variant:</strong>
+| Android space      | Windows space | FFU download                                                                               |
+| ------------------ | ------------- | ------------------------------------------------------------------------------------------ |
+| 88GB               | 25GB          | [LUN0_LA_88GB_WP_25GB.ffu](../../Files/Prebuilt-partitions/128GB/LUN0_LA_88GB_WP_25GB.ffu) |
+| 78GB               | 35GB          | [LUN0_LA_78GB_WP_35GB.ffu](../../Files/Prebuilt-partitions/128GB/LUN0_LA_78GB_WP_35GB.ffu) |
+| 68GB               | 45GB          | [LUN0_LA_68GB_WP_45GB.ffu](../../Files/Prebuilt-partitions/128GB/LUN0_LA_68GB_WP_45GB.ffu) |
+| 58GB               | 55GB          | [LUN0_LA_58GB_WP_55GB.ffu](../../Files/Prebuilt-partitions/128GB/LUN0_LA_58GB_WP_55GB.ffu) |
+| 48GB               | 65GB          | [LUN0_LA_48GB_WP_65GB.ffu](../../Files/Prebuilt-partitions/128GB/LUN0_LA_48GB_WP_65GB.ffu) |
+| 38GB               | 75GB          | [LUN0_LA_38GB_WP_75GB.ffu](../../Files/Prebuilt-partitions/128GB/LUN0_LA_38GB_WP_75GB.ffu) |
+| 28GB               | 85GB          | [LUN0_LA_28GB_WP_85GB.ffu](../../Files/Prebuilt-partitions/128GB/LUN0_LA_28GB_WP_85GB.ffu) |
+| 18GB               | 95GB          | [LUN0_LA_18GB_WP_95GB.ffu](../../Files/Prebuilt-partitions/128GB/LUN0_LA_18GB_WP_95GB.ffu) |
+| 8GB                | 108GB         | [LUN0_LA_8GB_WP_105GB.ffu](../../Files/Prebuilt-partitions/128GB/LUN0_LA_8GB_WP_105GB.ffu) |
+
+- Once you have acquired an .FFU file, place it in the extracted **imageutility** folder.
+
+FFU file needs to be flashed in the UFP mode in UEFI. To enter UFP mode, folow these steps:
+
+- Reboot the phone to UEFI
+- When UEFI starts to load, hold the volume up button until this shows up on your device:
+
+<img src="../images/A52s-FFU.png" width="280">
+
+On your Windows computer, open the `flash.cmd` file in the **imageutility** directory.
+
+The script will automatically find an .FFU file in the current directory and will prompt you to flash the file (Y/N). Type Y to continue.
+
+The FFU flashing process will start. If the flash is successful, you should see this on your device:
+
+<img src="../images/FFU-flash-success.png" width="280">
+
+After a successful flash, the script will prompt you to reboot the device (Y/N). Type Y to reboot, then hold Power + Volume Up buttons on the device to enter the TWRP recovery.
+</details>
+
+<details>
+   <summary><strong>Option 2: Manual partitioning</strong></summary> 
+
+- Extract the previously downloaded imageutility.zip archive on your computer.
+- Download the [LUNs_stock_online_fixed.ffu](../../Files/LUNs_stock_online_fixed.ffu) FFU file which will re-provision all LUNs and set the LUN0 online.
+- Once you have acquired an .FFU file, place it in the extracted **imageutility** folder.
+
+FFU file needs to be flashed in the UFP mode in UEFI. To enter UFP mode, folow these steps:
+
+- Reboot the phone to UEFI
+- When UEFI starts to load, hold the volume up button until this shows up on your device:
+
+<img src="../images/A52s-FFU.png" width="280">
+
+On your Windows computer, open the `flash.cmd` file in the **imageutility** directory.
+
+The script will automatically find an .FFU file in the current directory and will prompt you to flash the file (Y/N). Type Y to continue.
+
+The FFU flashing process will start. If the flash is successful, you should see this on your device:
+
+<img src="../images/FFU-flash-success.png" width="280">
+
+After a successful flash, the script will prompt you to reboot the device (Y/N). Type Y to reboot, then hold Power + Volume Up buttons on the device to enter the TWRP recovery.
+
 Make sure that either adb is on PATH in your terminal, or you are in the same directory where adb.exe exists.
 
 - While your phone is booted into TWRP recovery and connected to your PC, execute this command to enter recovery shell:
@@ -82,19 +147,7 @@ Make sure that either adb is on PATH in your terminal, or you are in the same di
 adb shell
 ```
 
-- Run a command that sets the LUN0 disk online:
-
-```sh
-fix-gpt
-```
-
-- Reboot to TWRP again to update partition table changes:
-
-```sh
-reboot recovery
-```
-
-- Once back in TWRP, in the "Mount" menu untick the checkbox on the userdata partition to unmount it.
+- In the TWRP "Mount" menu, untick the checkbox on the userdata partition to unmount it.
 
 - Execute the parted utility:
 
@@ -112,28 +165,39 @@ This partition needs to be deleted and then created again later along with the p
 rm 34
 ```
 
-- Create the ESP partition (571MB):
+- Create the userdata partition again.
+
+To calculate the end of the new partition, use this formula: `last parti end + (size) = new parti end`
+
+For e.x: If I want userdata partition to be 40GB in size: 13.2GB + 40GB = 53.2GB
+
+Then create the partition:
+```sh
+mkpart userdata ext4 13.2GB 53.2GB
+```
+
+- Create the ESP partition (500MB):
+
+Same logic goes for calculating ESP partition end.
+> 53.2GB + 0.5GB = 52.7GB
 
 ```sh
-mkpart esp fat32 13.2GB 13.8GB
+mkpart esp fat32 53.2GB 52.7GB
 ```
 
 - Make the ESP partition bootable:
 
 ```sh
-set 34 esp on
+set 35 esp on
 ```
 
-- Create a main partition where Windows will be installed to (in this case, it's 60GB in size):
+- Create a main partition where Windows will be installed to (in this case, it's 74GB in size):
 
+Last partition's end size should be: `size of your disk - 1`. So for 128GB models: 127GB. For 256GB models: 255GB
+
+> 52.7GB + 74.3GB = 127GB
 ```sh
-mkpart win ntfs 13.8GB 73.8GB
-```
-
-- Create Android's userdata partition (in this case, it's 53.6GB in size):
-
-```sh
-mkpart userdata ext4 73.8GB 127GB
+mkpart win ntfs 52.7GB 127GB
 ```
 
 - Quit parted:
@@ -142,7 +206,7 @@ mkpart userdata ext4 73.8GB 127GB
 quit
 ```
 
-- Reboot to TWRP recovery again:
+- Reboot to TWRP recovery again (to reflect partitioning changes):
 
 ```sh
 reboot recovery
@@ -166,41 +230,9 @@ mkfs.fat -F32 -s1 /dev/block/bootdevice/by-name/esp
 mkfs.ntfs -f /dev/block/bootdevice/by-name/win
 ```
 
-- Format userdata partition to F2FS in TWRP menu: Wipe > Format Data > yes
+- Format userdata partition in TWRP menu: Wipe > Format Data > yes
 
-## Fixing GPT tables of other LUNs
-
-Samsung Galaxy A52s 5G UFS storage has incorrectly provisioned GPTs of LUNs that Windows 24H2 and above can easily break, in turn bricking the device.
-
-Flashing a specialized FFU image will correct the GPT tables of LUNs 1-5.
-
-FFU file needs to be flashed in the UFP mode in UEFI. To enter UFP mode, folow these steps:
-
-- Reboot the phone to UEFI
-- When UEFI starts to load, hold the volume up button until this shows up on your device:
-
-<img src="../images/A52s-FFU.png" width="280">
-
-
-On your Windows computer, open command prompt or terminal in the **imageutility** directory.
-
-- Enter this command to flash the FFU file on your device:
-
-```
-.\imageutility.exe FlashDevice -Path Fix_GPT_LUNs_1-5.ffu
-```
-
-The FFU flashing process will start. If the flash is successful, you should see this on your device:
-
-<img src="../images/FFU-flash-success.png" width="280">
-
-- After a successful flash, reboot the device with this command:
-
-```
-.\imageutility.exe RebootDevice
-```
-
-Hold the volume up and power buttons to boot to TWRP recovery again.
+</details>
 
 ## Activating Mass Storage Mode
 
@@ -334,6 +366,9 @@ Congratulations, you just installed your drivers!
 - You can now reboot your phone and boot to Windows.
 
 ## Boot Windows
+
+> [!NOTE]
+> When booting OS, unplug the USB cable from the device. Otherwise, the host-mode USB drivers will not work in Windows.
 
 If you did everything right, Windows will now boot! Enjoy!
 
