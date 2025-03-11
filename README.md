@@ -19,7 +19,7 @@ Guides for running Windows on Samsung Galaxy A52s 5G.
 
 ## Additional Guides:
 
-- N/A (To be done)
+- [Backing up important partitions](Install/BackingUpImportantPartitions.md)
 
 ## More Resources:
 

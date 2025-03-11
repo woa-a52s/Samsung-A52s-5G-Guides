@@ -4,7 +4,7 @@ This guide will help you go back to a normal Galaxy A52s 5G, with Android™ onl
 
 Just like you had it before installing Windows.
 
-Android™ will have access to the whole memory back again.
+Android™ will have access to the whole memory back again. All LUNs (0-5) will be restored to stock.
 
 Your data will be erased, please make backups if you need it before proceeding!
 

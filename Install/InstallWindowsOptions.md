@@ -10,7 +10,7 @@
 > We do not recommend you run this experimental firmware on a Galaxy A52s 5G device if it's your main phone, as potentially unexpected behaviour (including a device brickage) can occur, especially if you're not a very experienced end-user. This project is by any means not responsible for potential damage done to the device, end-user is responsible for his own actions. Consider yourself warned! 
 
 > [!CAUTION]
-> Only BIT-9 Bootloader version is supported. Installing Windows while having a lower or higher bootloader version can (and will) brick your device. Do not proceed if your BL version is anything other than BIT 9.
+> Only BIT-10 Bootloader version is supported. Installing Windows while having a lower or higher bootloader version **will brick your device**. Do not proceed if your BL version is anything other than BIT 10.
 
 There are three methods to install Windows:
 
@@ -21,4 +21,4 @@ There are three methods to install Windows:
 | - Quickest                                                                                                     | ~~- Takes a little bit of time~~                                                                                   | - Longest                                                                                                      |
 | - Simple                                                                                                       | ~~- Doable for most people~~                                                                                       | - Complicated for inexperienced user, and can lead to mistakes breaking the device if done incorrectly         |
 | - Lack of options in regards to OS version, edition, storage allocation                                        | ~~- Customizable in regards to OS version, language, edition, storage allocation~~                                 | - Highly customizable in regards to OS version, language, edition, storage allocation                          |
-| [FFU Guide](FFU-Guide/FlashingFFU.md)                                                                          | Currently unavailable                                                                                              | [Manual Guide](Manual-Guide/InstallWindowsManually.md)                                                          |
+| [FFU Guide](FFU-Guide/FlashingFFU.md)                                                                          | Currently unavailable                                                                                              | [Manual Guide](Manual-Guide/InstallWindowsManually.md)                                                         |

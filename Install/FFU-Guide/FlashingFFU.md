@@ -17,6 +17,7 @@ Table of Contents:
 * [Steps](#steps)
    * [Unlocking the Bootloader](#unlocking-the-bootloader)
    * [Flashing UEFI](#flashing-uefi)
+   * [Backing up Important Partitions](#backing-up-important-partitions)
    * [Acquiring all files](#acquiring-all-files)
    * [Booting to UFP mode](#booting-to-ufp-mode)
    * [Flashing the Windows FFU Image](#flashing-the-windows-ffu-image)
@@ -25,7 +26,7 @@ Table of Contents:
 ## Files/Tools Needed
 
 - A Galaxy A52s 5G
-- [An FFU file for your Galaxy A52s 5G](https://nextcloud.ver.lt/s/PLYTQbWoXA3jQ4C)
+- [An FFU file for your Galaxy A52s 5G](https://fullflash.ver.lt/A52sWOA/)
 - [imageutility.zip](../../Files/imageutility.zip)
 - A Windows PC to flash the device
 
@@ -53,6 +54,12 @@ If not already done, please first proceed with the [Unlocking the Bootloader](..
 
 If not already done, please first proceed with the [Flashing TWRP and UEFI](../Flash-UEFI-TWRP.md) guide for Galaxy A52s 5G. Come back once you're done. Keep in mind that you need to have matching UEFI
 image and Windows drivers from the same release version.
+
+## Backing up Important Partitions
+
+It is strongly recommended to [backup important partitions](../BackingUpImportantPartitions.md) that are unique to each device before proceeding with the guide.
+
+Please follow the provided guide, then come back once you're done.
 
 ## Acquiring all files
 

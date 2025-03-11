@@ -14,32 +14,32 @@ _No ETA will be provided for **any** of these development phases_
 
 ---
 
-Global progress: 52.09%
+Global progress: 60.42%
 
 | Feature                | Description                                                                                                    | Working state |
 |------------------------|----------------------------------------------------------------------------------------------------------------|---------------|
 | ⌨️ Side buttons        |                                                                                                                | ✅             |
-| ♋ Cellular Calls       | MPSS is not functional                                                                                         | ❌             |
-| ♋ Cellular Data        | MPSS is not functional                                                                                         | ❌             |
-| ♋ Cellular Texts       | MPSS is not functional                                                                                         | ❌           |
-| ♋ WiFi                 |                                                                                                                | ✅           |
-| 🌡️ Thermal sensors      |                                                                                                                | ✅           |
-| 🎆 GPU                  |                                                                                                                | ❌           |
-| 👆 Touchscreen          |                                                                                                                | ✅           |
-| 💤 Modern Standby       |                                                                                                                | ✅           |
-| 📌 GPS                  |                                                                                                                | ✅           |
-| 📦 UFS                  |                                                                                                                | ✅           |
-| 💾 SD Card              |                                                                                                                | ✅           |
-| 📲 Display              |                                                                                                                | ✅           |
-| 📳 Vibration motor      |                                                                                                                | ❌           |
-| 📸 [Camera Flash](https://gist.github.com/gus33000/8720db998a7ab9c164bd6a96e00dac32) | ICP is not functional                             | ❌           |
-| 🔋 Battery              |                                                                                                                | ✅           |
-| 🔌 Charger              | Custom charging driver needs to be written (WIP)                                                               | ❌           |
-| 🔵 Bluetooth            |                                                                                                                | ✅           |
-| 🧭 Sensors              |                                                                                                                | ❌           |
-| 🧮 SoC Cores            |                                                                                                                | ✅           |
-| 🪵 USB C               | Requires power delivery                                                                                        | ⚠️           |
-| 📸 Camera Sensor        | ICP is not functional                                                                                          | ❌           |
-| 🔊 Audio               |                                                                                                                | ❌           |
-| 🧬 Fingerprint scanner  |                                                                                                                | ❌           |
+| ♋ Cellular Calls       |                                                                                                                | ❌             |
+| ♋ Cellular Data        |                                                                                                                | ❌             |
+| ♋ Cellular Texts       |                                                                                                                | ❌             |
+| ♋ WiFi                 |                                                                                                                | ✅             |
+| 🌡️ Thermal sensors      |                                                                                                                | ✅             |
+| 🎆 GPU                  |                                                                                                                | ❌             |
+| 👆 Touchscreen          |                                                                                                                | ✅             |
+| 💤 Modern Standby       |                                                                                                                | ✅             |
+| 📌 GPS                  |                                                                                                                | ✅             |
+| 📦 UFS                  |                                                                                                               | ✅             |
+| 💾 SD Card              |                                                                                                                | ✅             |
+| 📲 Display              |                                                                                                                | ✅             |
+| 📳 Vibration motor      |                                                                                                                | ❌             |
+| 📸 [Camera Flash](https://gist.github.com/gus33000/8720db998a7ab9c164bd6a96e00dac32) |                                                   | ❌             |
+| 🔋 Battery              |                                                                                                                | ✅             |
+| 🔌 Charger              |                                                                                                                | ✅             |
+| 🔵 Bluetooth            |                                                                                                                | ✅             |
+| 🧭 Sensors              |                                                                                                                | ✅             |
+| 🧮 SoC Cores            |                                                                                                                | ✅             |
+| 🪵 USB C               | Requires power delivery. PD Driver is WIP                                                                      | ⚠️             |
+| 📸 Camera Sensor        | ICP is not functional                                                                                          | ❌             |
+| 🔊 Audio               |                                                                                                                | ❌             |
+| 🧬 Fingerprint scanner  |                                                                                                                | ❌             |
 

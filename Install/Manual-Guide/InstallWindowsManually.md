@@ -12,6 +12,7 @@ Table of Contents:
 * [Steps](#steps)
    * [Unlocking the Bootloader](#unlocking-the-bootloader)
    * [Flashing UEFI and TWRP](#flashing-uefi-and-twrp)
+   * [Backing up Important Partitions](#backing-up-important-partitions)
    * [Partitioning](#partitioning)
    * [Activating Mass Storage Mode](#activating-mass-storage-mode)
    * [Installing Windows](#installing-windows)
@@ -67,6 +68,13 @@ If not already done, please first proceed with the [Unlocking the Bootloader](..
 
 If not already done, please first proceed with the [Flashing TWRP and UEFI](../Flash-UEFI-TWRP.md) guide for Galaxy A52s 5G. Come back once you're done.
 
+## Backing up Important Partitions
+
+It is strongly recommended to [backup important partitions](../BackingUpImportantPartitions.md) that are unique to each device before proceeding with the guide.
+
+Please follow the provided guide, then come back once you're done.
+
+
 ## Partitioning
 
 There are two methods to partition the device, choose a single option to continue.
@@ -79,17 +87,30 @@ There are two methods to partition the device, choose a single option to continu
 - Pick a preffered storage layout from this table and download the provided FFU file
 
 <strong>For 128GB storage variant:</strong>
-| Android space      | Windows space | FFU download                                                                               |
-| ------------------ | ------------- | ------------------------------------------------------------------------------------------ |
-| 88GB               | 25GB          | [LUN0_LA_88GB_WP_25GB.ffu](../../Files/Prebuilt-partitions/128GB/LUN0_LA_88GB_WP_25GB.ffu) |
-| 78GB               | 35GB          | [LUN0_LA_78GB_WP_35GB.ffu](../../Files/Prebuilt-partitions/128GB/LUN0_LA_78GB_WP_35GB.ffu) |
-| 68GB               | 45GB          | [LUN0_LA_68GB_WP_45GB.ffu](../../Files/Prebuilt-partitions/128GB/LUN0_LA_68GB_WP_45GB.ffu) |
-| 58GB               | 55GB          | [LUN0_LA_58GB_WP_55GB.ffu](../../Files/Prebuilt-partitions/128GB/LUN0_LA_58GB_WP_55GB.ffu) |
-| 48GB               | 65GB          | [LUN0_LA_48GB_WP_65GB.ffu](../../Files/Prebuilt-partitions/128GB/LUN0_LA_48GB_WP_65GB.ffu) |
-| 38GB               | 75GB          | [LUN0_LA_38GB_WP_75GB.ffu](../../Files/Prebuilt-partitions/128GB/LUN0_LA_38GB_WP_75GB.ffu) |
-| 28GB               | 85GB          | [LUN0_LA_28GB_WP_85GB.ffu](../../Files/Prebuilt-partitions/128GB/LUN0_LA_28GB_WP_85GB.ffu) |
-| 18GB               | 95GB          | [LUN0_LA_18GB_WP_95GB.ffu](../../Files/Prebuilt-partitions/128GB/LUN0_LA_18GB_WP_95GB.ffu) |
-| 8GB                | 108GB         | [LUN0_LA_8GB_WP_105GB.ffu](../../Files/Prebuilt-partitions/128GB/LUN0_LA_8GB_WP_105GB.ffu) |
+| Android space      | Windows space | FFU download                                                                             |
+| ------------------ | ------------- | ---------------------------------------------------------------------------------------- |
+| 80GB               | 26GB          | [LA80GB_WP26GB_128GB.ffu](../../Files/Prebuilt-partitions/128GB/LA80GB_WP26GB_128GB.ffu) |
+| 70GB               | 36GB          | [LA70GB_WP36GB_128GB.ffu](../../Files/Prebuilt-partitions/128GB/LA70GB_WP36GB_128GB.ffu) |
+| 60GB               | 46GB          | [LA60GB_WP46GB_128GB.ffu](../../Files/Prebuilt-partitions/128GB/LA60GB_WP46GB_128GB.ffu) |
+| 50GB               | 56GB          | [LA50GB_WP56GB_128GB.ffu](../../Files/Prebuilt-partitions/128GB/LA50GB_WP56GB_128GB.ffu) |
+| 40GB               | 66GB          | [LA40GB_WP66GB_128GB.ffu](../../Files/Prebuilt-partitions/128GB/LA40GB_WP66GB_128GB.ffu) |
+| 30GB               | 76GB          | [LA30GB_WP76GB_128GB.ffu](../../Files/Prebuilt-partitions/128GB/LA30GB_WP76GB_128GB.ffu) |
+| 20GB               | 86GB          | [LA20GB_WP86GB_128GB.ffu](../../Files/Prebuilt-partitions/128GB/LA20GB_WP86GB_128GB.ffu) |
+| 10GB               | 96GB          | [LA10GB_WP96GB_128GB.ffu](../../Files/Prebuilt-partitions/128GB/LA10GB_WP96GB_128GB.ffu) |
+
+<strong>For 256GB storage variant:</strong>
+| Android space      | Windows space | FFU download                                                                                 |
+| ------------------ | ------------- | -------------------------------------------------------------------------------------------- |
+| 190GB              | 35GB          | [LA190GB_WP35GB_256GB.ffu](../../Files/Prebuilt-partitions/128GB/LA190GB_WP35GB_256GB.ffu)   |
+| 170GB              | 55GB          | [LA170GB_WP55GB_256GB.ffu](../../Files/Prebuilt-partitions/128GB/LA170GB_WP55GB_256GB.ffu)   |
+| 150GB              | 75GB          | [LA150GB_WP75GB_256GB.ffu](../../Files/Prebuilt-partitions/128GB/LA150GB_WP75GB_256GB.ffu)   |
+| 130GB              | 95GB          | [LA130GB_WP95GB_256GB.ffu](../../Files/Prebuilt-partitions/128GB/LA130GB_WP95GB_256GB.ffu)   |
+| 110GB              | 115GB         | [LA110GB_WP115GB_256GB.ffu](../../Files/Prebuilt-partitions/128GB/LA110GB_WP115GB_256GB.ffu) |
+| 90GB               | 135GB         | [LA90GB_WP135GB_256GB.ffu](../../Files/Prebuilt-partitions/128GB/LA90GB_WP135GB_256GB.ffu)   |
+| 70GB               | 155GB         | [LA70GB_WP155GB_256GB.ffu](../../Files/Prebuilt-partitions/128GB/LA70GB_WP155GB_256GB.ffu)   |
+| 50GB               | 175GB         | [LA50GB_WP175GB_256GB.ffu](../../Files/Prebuilt-partitions/128GB/LA50GB_WP175GB_256GB.ffu)   |
+| 30GB               | 195GB         | [LA30GB_WP195GB_256GB.ffu](../../Files/Prebuilt-partitions/128GB/LA30GB_WP195GB_256GB.ffu)   |
+| 10GB               | 215GB         | [LA10GB_WP215GB_256GB.ffu](../../Files/Prebuilt-partitions/128GB/LA10GB_WP215GB_256GB.ffu)   |
 
 - Once you have acquired an .FFU file, place it in the extracted **imageutility** folder.
 
@@ -144,25 +165,17 @@ Make sure that either adb is on PATH in your terminal, or you are in the same di
 adb shell
 ```
 
-- In the TWRP "Mount" menu, untick the checkbox on the userdata partition to unmount it.
-
 - Execute the parted utility:
 
 ```sh
 parted /dev/block/sda
 ```
 
-- Enter `p` command to print the existing partitions. Your last partition should be `userdata`.
-This partition needs to be deleted and then created again later along with the partitions required for Windows.
+- Enter `p` command to print the existing partitions.
 
-- Delete the userdata partition
-> Make sure that 34 really is the userdata partition with `p` command first!
+- Create the userdata partition.
 
-```sh
-rm 34
-```
-
-- Create the userdata partition again.
+The new partition start GB will be the last existing partition's end GB. If you have flashed the FFU, your new userdata partition start should be 13.2GB
 
 To calculate the end of the new partition, use this formula: `last parti end + (size) = new parti end`
 
@@ -207,24 +220,6 @@ quit
 
 ```sh
 reboot recovery
-```
-
-- Start the adb shell again on your computer:
-
-```sh
-adb shell
-```
-
-- Format the ESP partition to FAT32 filesystem:
-
-```sh
-mkfs.fat -F32 -s1 /dev/block/bootdevice/by-name/esp
-```
-
-- Format the Windows partition to NTFS filesystem:
-
-```sh
-mkfs.ntfs -f /dev/block/bootdevice/by-name/win
 ```
 
 - Format userdata partition in TWRP menu: Wipe > Format Data > yes
@@ -284,11 +279,18 @@ select disk 2
 list partition
 ```
 
-- Select the ESP partition number (in this example it's Nr. 34):
+- Select the ESP partition number (if you did everything according to the guide, it should be Nr. 35):
 
 ```batch
-select partition 34
+select partition 35
 ```
+
+- Format the ESP partition as FAT32:
+
+```batch
+format quick fs=fat32 label="System"
+```
+
 
 - Assign any available drive letter to the ESP partition (in this example it's S):
 
@@ -296,10 +298,16 @@ select partition 34
 assign letter S
 ```
 
-- Select the Windows partition number (in this example it's Nr. 35):
+- Select the Windows partition number (if you did everything according to the guide, it should be Nr. 36):
 
 ```batch
-select partition 35
+select partition 36
+```
+
+- Format the Windows partition as NTFS:
+
+```batch
+format quick fs=ntfs label="MainOS"
 ```
 
 - Assign any available drive letter to the Windows partition (in this example it's X):
@@ -322,8 +330,10 @@ From now on we will assume X: is the Win partition and that S: is the ESP partit
 - We will need our install.wim file now. If you haven't retrieved a Windows ISO yet, you can [use this guide](../ISO/GetWindows.md). When you are ready, run these commands:
 
 ```batch
-dism /apply-image /ImageFile:"<path to install.wim>" /index:1 /ApplyDir:X:\
+dism /apply-image /ImageFile:<path to install.wim> /index:1 /ApplyDir:X:\
 ```
+
+> Example command (replace the actual path to yours): `dism /apply-image /ImageFile:E:\sources\install.wim /index:1 /ApplyDir:X:\
 
 This will take a bit of time. Go make some coffee ☕ or some tea 🍵.
 
@@ -331,15 +341,6 @@ This will take a bit of time. Go make some coffee ☕ or some tea 🍵.
 
 ```batch
 bcdboot X:\Windows /s S: /f UEFI
-```
-
-- Allow unsigned drivers and disable failure checks:
-
-```batch
-bcdedit /store S:\EFI\Microsoft\BOOT\BCD /set "{default}" testsigning on
-bcdedit /store S:\EFI\Microsoft\BOOT\BCD /set "{default}" nointegritychecks on
-bcdedit /store S:\EFI\Microsoft\BOOT\BCD /set "{default}" recoveryenabled no
-bcdedit /store S:\EFI\Microsoft\BOOT\BCD /set "{default}" bootstatuspolicy IgnoreAllFailures
 ```
 
 Windows is now installed but has no drivers.
