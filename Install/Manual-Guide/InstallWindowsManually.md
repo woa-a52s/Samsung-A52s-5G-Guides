@@ -101,16 +101,16 @@ There are two methods to partition the device, choose a single option to continu
 <strong>For 256GB storage variant:</strong>
 | Android space      | Windows space | FFU download                                                                                 |
 | ------------------ | ------------- | -------------------------------------------------------------------------------------------- |
-| 190GB              | 35GB          | [LA190GB_WP35GB_256GB.ffu](../../Files/Prebuilt-partitions/128GB/LA190GB_WP35GB_256GB.ffu)   |
-| 170GB              | 55GB          | [LA170GB_WP55GB_256GB.ffu](../../Files/Prebuilt-partitions/128GB/LA170GB_WP55GB_256GB.ffu)   |
-| 150GB              | 75GB          | [LA150GB_WP75GB_256GB.ffu](../../Files/Prebuilt-partitions/128GB/LA150GB_WP75GB_256GB.ffu)   |
-| 130GB              | 95GB          | [LA130GB_WP95GB_256GB.ffu](../../Files/Prebuilt-partitions/128GB/LA130GB_WP95GB_256GB.ffu)   |
-| 110GB              | 115GB         | [LA110GB_WP115GB_256GB.ffu](../../Files/Prebuilt-partitions/128GB/LA110GB_WP115GB_256GB.ffu) |
-| 90GB               | 135GB         | [LA90GB_WP135GB_256GB.ffu](../../Files/Prebuilt-partitions/128GB/LA90GB_WP135GB_256GB.ffu)   |
-| 70GB               | 155GB         | [LA70GB_WP155GB_256GB.ffu](../../Files/Prebuilt-partitions/128GB/LA70GB_WP155GB_256GB.ffu)   |
-| 50GB               | 175GB         | [LA50GB_WP175GB_256GB.ffu](../../Files/Prebuilt-partitions/128GB/LA50GB_WP175GB_256GB.ffu)   |
-| 30GB               | 195GB         | [LA30GB_WP195GB_256GB.ffu](../../Files/Prebuilt-partitions/128GB/LA30GB_WP195GB_256GB.ffu)   |
-| 10GB               | 215GB         | [LA10GB_WP215GB_256GB.ffu](../../Files/Prebuilt-partitions/128GB/LA10GB_WP215GB_256GB.ffu)   |
+| 190GB              | 35GB          | [LA190GB_WP35GB_256GB.ffu](../../Files/Prebuilt-partitions/256GB/LA190GB_WP35GB_256GB.ffu)   |
+| 170GB              | 55GB          | [LA170GB_WP55GB_256GB.ffu](../../Files/Prebuilt-partitions/256GB/LA170GB_WP55GB_256GB.ffu)   |
+| 150GB              | 75GB          | [LA150GB_WP75GB_256GB.ffu](../../Files/Prebuilt-partitions/256GB/LA150GB_WP75GB_256GB.ffu)   |
+| 130GB              | 95GB          | [LA130GB_WP95GB_256GB.ffu](../../Files/Prebuilt-partitions/256GB/LA130GB_WP95GB_256GB.ffu)   |
+| 110GB              | 115GB         | [LA110GB_WP115GB_256GB.ffu](../../Files/Prebuilt-partitions/256GB/LA110GB_WP115GB_256GB.ffu) |
+| 90GB               | 135GB         | [LA90GB_WP135GB_256GB.ffu](../../Files/Prebuilt-partitions/256GB/LA90GB_WP135GB_256GB.ffu)   |
+| 70GB               | 155GB         | [LA70GB_WP155GB_256GB.ffu](../../Files/Prebuilt-partitions/256GB/LA70GB_WP155GB_256GB.ffu)   |
+| 50GB               | 175GB         | [LA50GB_WP175GB_256GB.ffu](../../Files/Prebuilt-partitions/256GB/LA50GB_WP175GB_256GB.ffu)   |
+| 30GB               | 195GB         | [LA30GB_WP195GB_256GB.ffu](../../Files/Prebuilt-partitions/256GB/LA30GB_WP195GB_256GB.ffu)   |
+| 10GB               | 215GB         | [LA10GB_WP215GB_256GB.ffu](../../Files/Prebuilt-partitions/256GB/LA10GB_WP215GB_256GB.ffu)   |
 
 - Once you have acquired an .FFU file, place it in the extracted **imageutility** folder.
 
