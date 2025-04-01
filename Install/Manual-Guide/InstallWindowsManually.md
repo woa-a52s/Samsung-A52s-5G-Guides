@@ -173,6 +173,13 @@ parted /dev/block/sda
 
 - Enter `p` command to print the existing partitions.
 
+- Delete existing userdata partition
+
+Delete the current userdata partition (we will create a smaller one later). Parted may complain about the partition being used and unable to notify the kernel, simply enter "Yes" & "Ignore".
+```sh
+rm 34
+```
+
 - Create the userdata partition.
 
 The new partition start GB will be the last existing partition's end GB. If you have flashed the FFU, your new userdata partition start should be 13.2GB
